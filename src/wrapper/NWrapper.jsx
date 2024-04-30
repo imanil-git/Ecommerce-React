@@ -7,14 +7,32 @@ import Contact from "../pages/Contact";
 import Navbar from "../components/Navbar";
 
 const NWrapper = () => {
+  const navItems = [
+    {
+      name : 'Home',
+      path : '/'
+    },
+    {
+      name : 'Products',
+      path : '/product'
+    },
+    {
+      name : 'Service',
+      path : '/service'
+    },
+    {
+      name : 'Contact',
+      path : '/contact'
+    }
+  ]
   return (
     <>
-    <Navbar />
+    <Navbar items = {navItems} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/product" element={<Products />} />
         <Route path="/service" element={<Service />} />
-        <Route path="/contacts" element={<Contact />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </>
   );
