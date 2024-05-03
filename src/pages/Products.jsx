@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import { FaBluetooth } from "react-icons/fa";
 
 const Products = () => {
   return (
     <div>
-      Products
+      <FaBluetooth />
     </div>
-  )
-}
+  );
+};
 
-export default Products
+export default Products;
