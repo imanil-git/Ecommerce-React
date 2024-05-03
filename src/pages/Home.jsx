@@ -1,10 +1,18 @@
 import React from "react";
 import productImage from "../assets/Panther.jpeg";
-import {RiInstagramFill} from 'react-icons/ri';
+import ProductCard from "../components/ProductCard";
+import { RiInstagramFill } from "react-icons/ri";
 import { IoLogoFacebook } from "react-icons/io5";
 import { TiSocialTwitter } from "react-icons/ti";
 
 const Home = () => {
+  const productData = [
+    {
+      title: "title of 1st card",
+      image: productImage,
+      description: "Listen and you will know",
+    },
+  ];
   return (
     <>
       <main>
@@ -17,7 +25,7 @@ const Home = () => {
                 </h1>
                 <form action="">
                   <input type="text" className="border rounded-xl w-72" />
-                </form> 
+                </form>
               </div>
             </div>
           </div>
@@ -29,6 +37,17 @@ const Home = () => {
             <IoLogoFacebook />
             <TiSocialTwitter />
           </div>
+        </div>
+
+        <div>
+          {productData.map((product, index) => (<ProductCard key={index}
+              image={product.image}
+              title={product.title}
+              description={product.description}
+            />
+        )
+            
+          )}
         </div>
       </main>
     </>
