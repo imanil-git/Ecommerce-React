@@ -1,6 +1,7 @@
 import React from "react";
 import NWButton from "../wrapper/NWButton";
 import { Link } from "react-router-dom";
+import Logo from "../assets/e-logo.png"
 
 const Navbar = ({ items }) => {
   console.log(items, "item");
@@ -8,6 +9,10 @@ const Navbar = ({ items }) => {
     <>
       <nav className="w-full z-20 top-0 start-0 border-gray-200 dark:border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <div>
+            <img className=" w-10" src={Logo} alt="logo.png" />
+            <span className="text-xl font-bold font-sans">E-Shop</span>
+          </div>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             {/* ---======= Button ======--- */}
             <NWButton name="SignIn" type="submit" />

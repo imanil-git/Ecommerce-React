@@ -5,6 +5,7 @@ import Products from "../pages/Products";
 import Service from "../pages/Service";
 import Contact from "../pages/Contact";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const NWrapper = () => {
   const navItems = [
@@ -34,6 +35,8 @@ const NWrapper = () => {
         <Route path="/service" element={<Service />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+    
+    <Footer />
     </>
   );
 };

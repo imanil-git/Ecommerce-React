@@ -23,12 +23,22 @@ const Home = () => {
       title: "title of 3rd card",
       image: productImage3,
       description : "Good Quality of photo and vidoes"
+    },
+    {
+      title: "title of 4th card",
+      image: productImage3,
+      description : "Happy costumer"
+    },
+    {
+      title: "title of 4th card",
+      image: productImage3,
+      description : "Happy costumer"
     }
   ];
   return (
     <>
-      <main>
-        <div className="container m-auto flex justify-around items-center border p-4 rounded-xl">
+      <main className="container m-auto">
+        <div className="flex justify-around items-center border p-4 rounded-xl">
           <div>
             <div className="flex justify-center">
               <div>
@@ -51,7 +61,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex justify-center gap-4">
+        <div className="w-full grid grid-cols-3 gap-4">
           {productData.map((product, index) => (
             <ProductCard
               key={index}

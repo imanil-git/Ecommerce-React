@@ -3,7 +3,7 @@ import React from "react";
 const ProductCard = ({ image, title, description }) => {
   return (
     <>
-      <div className="max-w-sm border p-4">
+      <div className="max-w-sm shrink-0 border p-4">
         <div className="flex justify-center bg-slate-300">
           <img
             src={image}
