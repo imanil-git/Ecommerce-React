@@ -1,6 +1,8 @@
 import React from "react";
 import productImage from "../assets/Panther.jpeg";
 import ProductCard from "../components/ProductCard";
+import productImage1 from "../assets/Earpod.jpg"
+import productImage3 from "../assets/Iphone.jpg"
 import { RiInstagramFill } from "react-icons/ri";
 import { IoLogoFacebook } from "react-icons/io5";
 import { TiSocialTwitter } from "react-icons/ti";
@@ -12,6 +14,16 @@ const Home = () => {
       image: productImage,
       description: "Listen and you will know",
     },
+    {
+      title: "title of 2nd card",
+      image: productImage1,
+      description : "I am better than headphone"
+    },
+    {
+      title: "title of 3rd card",
+      image: productImage3,
+      description : "Good Quality of photo and vidoes"
+    }
   ];
   return (
     <>
@@ -39,15 +51,15 @@ const Home = () => {
           </div>
         </div>
 
-        <div>
-          {productData.map((product, index) => (<ProductCard key={index}
+        <div className="flex justify-center gap-4">
+          {productData.map((product, index) => (
+            <ProductCard
+              key={index}
               image={product.image}
               title={product.title}
               description={product.description}
             />
-        )
-            
-          )}
+          ))}
         </div>
       </main>
     </>
