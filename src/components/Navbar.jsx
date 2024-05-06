@@ -7,11 +7,11 @@ const Navbar = ({ items }) => {
   console.log(items, "item");
   return (
     <>
-      <nav className="w-full z-20 top-0 start-0 border-gray-200 dark:border-gray-600">
+      <nav className="w-full z-20 top-0 start-0 border-gray-200 dark:border-gray-600 mb-8">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div>
             <img className=" w-10" src={Logo} alt="logo.png" />
-            <span className="text-xl font-bold font-sans">E-Shop</span>
+            <p className="text-lg font-bold font-sans text-red-500">E-Shop</p>
           </div>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             {/* ---======= Button ======--- */}

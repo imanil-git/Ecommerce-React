@@ -13,32 +13,37 @@ const Home = () => {
       title: "title of 1st card",
       image: productImage,
       description: "Listen and you will know",
+      category : "New"
     },
     {
       title: "title of 2nd card",
       image: productImage1,
-      description : "I am better than headphone"
+      description : "I am better than headphone",
+      category : "New"
     },
     {
       title: "title of 3rd card",
       image: productImage3,
-      description : "Good Quality of photo and vidoes"
+      description : "Good Quality of photo and vidoes",
+      category : "New"
     },
     {
       title: "title of 4th card",
       image: productImage3,
-      description : "Happy costumer"
+      description : "Happy costumer",
+      category : "New"
     },
     {
       title: "title of 4th card",
       image: productImage3,
-      description : "Happy costumer"
+      description : "Happy costumer",
+      category : "New"
     }
   ];
   return (
     <>
       <main className="container m-auto">
-        <div className="flex justify-around items-center border p-4 rounded-xl">
+        <div className="flex justify-around items-center border p-4 rounded-xl mb-8">
           <div>
             <div className="flex justify-center">
               <div>
@@ -61,13 +66,14 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="w-full grid grid-cols-3 gap-4">
+        <div className="w-full grid grid-cols-3 gap-4 mb-8">
           {productData.map((product, index) => (
             <ProductCard
               key={index}
               image={product.image}
               title={product.title}
               description={product.description}
+              category={product.category}
             />
           ))}
         </div>

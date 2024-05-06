@@ -7,7 +7,7 @@ const NWButton = (props) => {
       type={type}
       className={
         classnames ??
-        `text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700x`
+        `text-white bg-[#F74046] font-medium rounded-lg text-sm px-4 py-2 text-center`
       }
     >
       {name}
