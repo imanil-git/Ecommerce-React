@@ -1,10 +1,11 @@
 import React from "react";
 import NWButton from "../wrapper/NWButton";
 import { Link } from "react-router-dom";
-import Logo from "../assets/e-logo.png"
+import Logo from "../assets/e-logo.png";
+import { useLocation } from "react-router-dom";
 
 const Navbar = ({ items }) => {
-  console.log(items, "item");
+  const loc = useLocation().pathname;
   return (
     <>
       <nav className="w-full z-20 top-0 start-0 border-gray-200 dark:border-gray-600 mb-8">
@@ -28,7 +29,12 @@ const Navbar = ({ items }) => {
                     <li>
                       <a
                         href="#"
-                        className=" hover:text-blue-700 hover:underline"
+                        className=" hover:text-red-500 hover:underline"
+                        style={{
+                          color: nav.path === loc ? "red" : "black",
+                          textDecoration:
+                            nav.path === loc ? "underline" : "none",
+                        }}
                         aria-current="page"
                       >
                         {nav.name}
