@@ -6,6 +6,7 @@ import Service from "../pages/Service";
 import Contact from "../pages/Contact";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Aboutus from "../pages/Aboutus";
 
 const NWrapper = () => {
   const navItems = [
@@ -24,6 +25,10 @@ const NWrapper = () => {
     {
       name : 'Contact',
       path : '/contact'
+    },
+    {
+      name : 'About Us',
+      path : '/aboutus'
     }
   ]
   return (
@@ -34,6 +39,7 @@ const NWrapper = () => {
         <Route path="/product" element={<Products />} />
         <Route path="/service" element={<Service />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/aboutus" element={<Aboutus />} />
       </Routes>
     
     <Footer />
